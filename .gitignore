@@ -1,3 +1,22 @@
+# OSX
+# =========================
+# Code created files
+# =========================
+
+# C++ files
+# =========================
+
+*.o
+*.exe
+
+
+# =========================
+# Operating System Files
+# =========================
+
+# Windows
+# =========================
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -17,9 +36,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# =========================
-# Operating System Files
-# =========================
 
 # OSX
 # =========================
@@ -45,3 +61,6 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+
+
