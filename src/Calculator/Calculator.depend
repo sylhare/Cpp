@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1520463835 source:d:\documents\github\cpp\src\calculator\main.cpp
+	<iostream>
+
+1520463614 source:d:\documents\github\cpp\src\calculator\operation.cpp
+
+1520464410 source:d:\documents\github\cpp\src\calculator\math.cpp
+	"math.h"
+
+1520464448 d:\documents\github\cpp\src\calculator\math.h
+
