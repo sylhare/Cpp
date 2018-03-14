@@ -13,7 +13,7 @@ int add(int a, int b)
     return a + b;
 }
 
-double logarithm(int a, int b)
+double powaa(int a, int b)
 {
     return pow(a, b);
 }

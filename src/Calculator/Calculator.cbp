@@ -32,9 +32,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="global.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="math.cpp" />
 		<Unit filename="math.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="print.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="print.hpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Extensions>
