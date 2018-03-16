@@ -19,13 +19,46 @@ To start coding in c++ you would need three things:
     - A compiler
     - A debugger
 
-Thanksfully there are options where all three are integrated in a IDE (Integrated Development Environment).
+Thanksfully there are options where all three are integrated in an IDE (Integrated Development Environment).
 A standard and famous IDE to use would be [code::blocks](http://www.codeblocks.org/downloads/26). If you are on windows, choose the version with [MinGW] which is a c++ compiler.
 If you are on Linux (debian, ubuntu):
 
 ```bash
 apt-get install build-essential codeblocks
 ```
+
+You can open the IDE and start writing your programms in a `.cpp` file.
+
+## Tips
+
+### Don't try to optimize blindly
+
+Check what takes time first. Most of the programming optimization is done via the compiler.
+
+### Don't use `std::endl` if `\n` will do
+
+Using `std::endl` emits a `\n` and flushes the stream. Unless you really need the stream flushed.
+`std::endl` is potentially more computationally costly.
+
+### Don't abuse using `namespace std`
+
+Putting using namespace std at the top of every program is a bad habit. 
+Consider this: you are using two libraries called Foo and Bar:
+
+    using namespace foo;
+    using namespace bar;
+
+
+Everything works fine, you can call `Blah()` from Foo and `Quux()` from Bar without problems. But one day you upgrade to a new version of Foo, which now offers a function called `Quux()`. Now you've got a conflict: Both Foo 2.0 and Bar import `Quux()` into your global namespace. This is going to take some effort to fix, especially if the function parameters happen to match.
+
+If you had used `foo::Blah()` and `bar::Quux()`, then the introduction of `foo::Quux()` would have been a non-event.
+
+### The "`return 0;`" is optionnal for main 
+
+For C++, since the first standard in 1998; see ISO/IEC 14882:1998 section 3.6.1:
+
+> If control reaches the end of main without encountering a return statement, the effect is that of executing return 0;
+
 
 ## Calculator
 
@@ -58,12 +91,11 @@ It implements:
 Challenge from google, to recreate a minesweeper.
 There's the challenge and the solution.
 
-I have made one in javascript that is fully functionnaland better looking.
+I have made one [minesweeper in javascript](https://sylhare.github.io/Minesweeper/) that is fully functionnal and better looking.
 
-- [Minesweeper JS](https://sylhare.github.io/Minesweeper/)
 
 ### Source
 
 - [Google's dev camp](https://techdevguide.withgoogle.com/paths/foundational/sequence-2/coding-question-minesweeper/#)
 - [Solving minesweeper with Matrics](https://massaioli.wordpress.com/2013/01/12/solving-minesweeper-with-matricies/)
-- [sylhare - Minesweeper](https://github.com/Sylhare/Minesweeper)
+- [Sylhare - Minesweeper](https://github.com/Sylhare/Minesweeper)
