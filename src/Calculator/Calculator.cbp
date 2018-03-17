@@ -38,12 +38,6 @@
 		<Unit filename="math.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="print.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="print.hpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />
