@@ -8,6 +8,10 @@
 
 *.o
 *.exe
+*.layout
+*.depend
+/src/Calculator/bin/*
+/src/Calculator/obj/*
 
 
 # =========================
