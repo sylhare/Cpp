@@ -13,13 +13,23 @@ int add(int a, int b)
     return a + b;
 }
 
+double multiply(double a, double b)
+{
+    return a * b;
+}
+
 double powaa(int a, int b)
 {
     return pow(a, b);
 }
 
-double squareroot(int a)
+double squareroot(double a)
 {
     return sqrt(a);
 }
 
+
+double square(double x)
+{
+    return multiply(x, x);
+}

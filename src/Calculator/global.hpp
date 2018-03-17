@@ -1,6 +1,8 @@
 #ifndef GLOBAL_HPP_INCLUDED
 #define GLOBAL_HPP_INCLUDED
 
+#include <string>
+
 using namespace std;
 
 const string GLOBAL_CONST_VAR = "test";

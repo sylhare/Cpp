@@ -9,31 +9,28 @@
 #include <iostream>
 #include "math.h"
 #include "global.hpp"
-#include "print.hpp"
 
 using namespace std;
 
 void title()
 {
-    cout << "   ____           _                  _           _                  \n";
-    cout << "  / ___|   __ _  | |   ___   _   _  | |   __ _  | |_    ___    _ __ \n";
-    cout << " | |      / _` | | |  / __| | | | | | |  / _` | | __|  / _ \\  | '__|\n";
-    cout << " | |___  | (_| | | | | (__  | |_| | | | | (_| | | |_  | (_) | | |   \n";
-    cout << "  \\____|  \\__,_| |_|  \\___|  \\__,_| |_|  \\__,_|  \\__|  \\___/  |_|   \n";
-    cout << '\n';
-
     cout << CALCULATOR;
 }
 
-void printValue(int a, int b)
+void printValue(double a, string value, string operation)
 {
-    cout << "- a: " << a;
+    cout << operation << "\n " << value << ": " << a;
+}
+
+void printValues(int a, int b, string operation)
+{
+    printValue(a, "a", operation);
     cout << " and b: " << b << '\n';
 }
 
 void print(string s)
 {
-    cout << s << endl;
+    cout << s << '\n';
 }
 
 int main()
@@ -41,13 +38,23 @@ int main()
     int a(2), b(0);
     double c;
     title();
-    printValue(a, b);
-    b = addTwo(a);
-    printValue(a, b);
-    c = powaa(a, b);
-    cout << "c: " << c << endl;
-    print("allo");
-    print(GLOBAL_CONST_VAR);
+
+    cout << "This is the 'lame' calculator \nEnter a number: ";
+    cin >> a;
+    cout << "And another one: ";
+    cin >> b;
+
+    printValues(a, b, "\n---\n\n- Your input:");
+
+    b = addTwo(b);
+    a = addTwo(a);
+    printValues(a, b, "- Add two:");
+
+    cout << "- Power " << a << "^"<< b << ": \n";
+    cout << " c:" << powaa(a, b) << "\n";
+
+    c = multiply(a, b);
+
 
     return 0;
 }

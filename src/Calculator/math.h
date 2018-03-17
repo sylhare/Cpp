@@ -3,7 +3,9 @@
 
 int addTwo(int number);
 int add(int a, int b);
+double multiply(double a, double b);
 double powaa(int a, int b);
-double squareroot(int a);
+double squareroot(double a);
+double square(double x);
 
 #endif // MATH_H_INCLUDED
