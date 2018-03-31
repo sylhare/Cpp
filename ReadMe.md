@@ -77,6 +77,7 @@ It implements:
 
 - [Openclassroom - C++](https://openclassrooms.com/courses/programmez-avec-le-langage-c)
 
+
 ## Minesweeper
 
 ```bash
@@ -99,3 +100,23 @@ I have made one [minesweeper in javascript](https://sylhare.github.io/Minesweepe
 - [Google's dev camp](https://techdevguide.withgoogle.com/paths/foundational/sequence-2/coding-question-minesweeper/#)
 - [Solving minesweeper with Matrics](https://massaioli.wordpress.com/2013/01/12/solving-minesweeper-with-matricies/)
 - [Sylhare - Minesweeper](https://github.com/Sylhare/Minesweeper)
+
+
+## Conway's game of life
+
+![life!](https://raw.githubusercontent.com/Sylhare/Cpp/master/resources/conway-gof.gif)
+
+### Rules
+
+The universe of the Game of Life is an infinite two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, alive or dead, or "populated" or "unpopulated". 
+
+Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent. At each step in time, the following transitions occur:
+  *
+  *  - Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.
+  *  - Any live cell with two or three live neighbours lives on to the next generation.
+  *  - Any live cell with more than three live neighbours dies, as if by overpopulation.
+  *  - Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+  
+  ### Sources
+  
+  - [Conway's game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
