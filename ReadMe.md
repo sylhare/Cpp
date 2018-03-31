@@ -106,17 +106,36 @@ I have made one [minesweeper in javascript](https://sylhare.github.io/Minesweepe
 
 ![life!](https://raw.githubusercontent.com/Sylhare/Cpp/master/resources/conway-gof.gif)
 
+The Game of Life is a cellular automaton devised by the British mathematician John Horton Conway in 1970.
+
 ### Rules
 
 The universe of the Game of Life is an infinite two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, alive or dead, or "populated" or "unpopulated". 
 
 Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent. At each step in time, the following transitions occur:
-  *
-  *  - Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.
-  *  - Any live cell with two or three live neighbours lives on to the next generation.
-  *  - Any live cell with more than three live neighbours dies, as if by overpopulation.
-  *  - Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+
+- Any live cell with fewer than two live neighbours dies, as if caused by **underpopulation**.
+- Any live cell with two or three live neighbours lives on to the **next generation**.
+- Any live cell with more than three live neighbours dies, as if by **overpopulation**.
+- Any dead cell with exactly three live neighbours becomes a live cell, as if by **reproduction**.
+
+### Implementation
+
+A cell   **C**   is represented by a   **1**   when alive,   or   **0**   when dead,   in an   **m×m**   square array of cells.
+
+We calculate   N   (the sum of live cells in C's eight-location neighbourhood), the state of the cell   C   is then dead or alive in the next generation based on the following table:
+```
+   C   N                 new C
+   1   0,1             ->  0  # Lonely
+   1   4,5,6,7,8       ->  0  # Overcrowded
+   1   2,3             ->  1  # Lives
+   0   3               ->  1  # It takes three to give birth!
+   0   0,1,2,4,5,6,7,8 ->  0  # Barren
+```
+
+Cells near or beyond the border are considered to be dead.
   
-  ### Sources
+### Sources
   
-  - [Conway's game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
+- [Conway's game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
+- [Rosetta Code Game of life](https://rosettacode.org/wiki/Conway%27s_Game_of_Life)
